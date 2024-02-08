@@ -22,7 +22,7 @@ export const moviesApi = baseCreateApi.injectEndpoints({
     >({
       query({ skipPages = 0, pageSize = MAX_MOVIES_PER_PAGE }) {
         return {
-          url: generateUrlWithQueryParams("/users/movies", {
+          url: generateUrlWithQueryParams("/movies", {
             skipPages,
             pageSize,
           }),
@@ -44,7 +44,7 @@ export const moviesApi = baseCreateApi.injectEndpoints({
     getMovieById: builder.query<GetMovieByIdResponse, GetMovieByIdRequest>({
       query({ movieId }) {
         return {
-          url: `/users/movies/${movieId}`,
+          url: `/movies/${movieId}`,
           method: HttpMethods.GET,
         };
       },
@@ -61,7 +61,7 @@ export const moviesApi = baseCreateApi.injectEndpoints({
     createMovie: builder.mutation<CreateMovieResponse, CreateMovieRequest>({
       query({ formData }) {
         return {
-          url: "/users/movies",
+          url: "/movies",
           method: HttpMethods.POST,
           body: formData,
           useFormData: true,
@@ -82,7 +82,7 @@ export const moviesApi = baseCreateApi.injectEndpoints({
     updateMovie: builder.mutation<UpdateMovieResponse, UpdateMovieRequest>({
       query({ formData, movieId }) {
         return {
-          url: `/users/movies/${movieId}`,
+          url: `/movies/${movieId}`,
           method: HttpMethods.PATCH,
           body: formData,
           useFormData: true,
