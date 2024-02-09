@@ -15,7 +15,7 @@ const Palette = () => {
         secondary: "#fff",
       },
       primary: {
-        main: "#a70fc1d4",
+        main: "#494747",
       },
       secondary: {
         main: "#fff",
@@ -26,9 +26,9 @@ const Palette = () => {
       },
       background: {
         paper: "#fff",
-        light: "#c627e159",
+        light: "#38353959",
         default: "#88c3ea",
-        dark: "#c627e159",
+        dark: "#38353959",
       },
       error: {
         main: "#EB5757",
